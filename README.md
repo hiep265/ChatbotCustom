@@ -23,6 +23,18 @@ pip install -r requirements.txt
 GEMINI_API_KEY=your_gemini_api_key_here
 OPENAI_API_KEY=your_openai_api_key_here
 ```
+
+## Migration database với Alembic
+
+1. Đảm bảo biến môi trường `DATABASE_URL` đã được khai báo trong `.env`.
+2. Tạo revision mới khi thay đổi model:
+   ```bash
+   alembic revision --autogenerate -m "miêu tả thay đổi"
+   ```
+3. Áp dụng migration:
+   ```bash
+   alembic upgrade head
+   ```
 ## Đẩy dữ liệu vào Elasticsearch
 
 1. Cài đặt Elasticsearch:

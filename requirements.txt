@@ -5,6 +5,7 @@ python-multipart
 # Database
 SQLAlchemy
 psycopg2-binary
+alembic
 
 # Elasticsearch
 elasticsearch
